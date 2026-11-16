@@ -1,0 +1,41 @@
+.left {
+    left: 2%;
+}
+
+.right {
+    right: 2%;
+}
+
+.center {
+    left: 33%;
+    right: 33%;
+}
+
+.inputarea {
+    width: 90%;
+}
+
+#tree {
+    scale:0.8;
+}
+
+#output {
+    border-style: groove;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.split {
+  height: 100%;
+  width: 30%;
+  position: fixed;
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 20px;
+}

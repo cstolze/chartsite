@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>SynpaSite</title>
+    <link rel="stylesheet" href="style.css">
+    <script charset="utf-8" type="text/javascript" src="viz.js"></script>
+    <script charset="utf-8" type="text/javascript" src="full.js.opaque"></script>
+    <script charset="utf-8" type="text/javascript" src="chart_js.bc.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>A stack machine for LeanCharts</h1>
+    </header>
+    <p>This webpage is an implementation of the LeanCharts semantics. This is a work in progress, and there is no error-checking at all.</p>
+    <div class="split left">
+      <textarea id="parsing" rows="40" class="inputarea"></textarea></br>
+      <select id="examples" onChange="change()">
+	<option value="" selected disabled hidden>Choose an example</option>
+	<option value="abro">ABRO</option>
+	<option value="connector">Example with connectors</option>
+      </select>
+      <button onclick="parse(parsing.value)">Parse</button>
+      <button onclick="singlestep()">Single Step</button>
+      <button onclick="multistep()">Multi Step</button>
+    </div>
+    <div class="split center">
+      <h4>Tree:</h4>
+      <div id="tree"></div>
+    </div>
+    <div class="split right">
+      <h4>Program:</h4>
+      <div id="cont"></div>
+      <h4>Output:</h4>
+      <div id="output"></div>
+      <div>
+	<h4>Memory:</h4>
+	<table id="memory">
+	</table>
+      </div>
+    </div>
+    <script charset="utf-8" type="text/javascript" src="utils.js"></script>
+  </body>
+</html>
