@@ -4,9 +4,6 @@
     <meta charset="utf-8">
     <title>LeanCharts</title>
     <link rel="stylesheet" href="style.css">
-    <script charset="utf-8" type="text/javascript" src="viz.js"></script>
-    <script charset="utf-8" type="text/javascript" src="full.js.opaque"></script>
-    <script charset="utf-8" type="text/javascript" src="chart_js.bc.js"></script>
   </head>
   <body>
     <header>
@@ -21,14 +18,10 @@
 	<option value="connector">Example with connectors</option>
       </select>
       <button onclick="parse(parsing.value)">Parse</button>
-      <button onclick="singlestep()">Single Step</button>
-      <button onclick="multistep()">Multi Step</button>
+      <button id="single" onclick="singlestep()" disabled>Single Step</button>
+      <button id="multi" onclick="multistep()" disabled>Multi Step</button>
     </div>
     <div class="split center">
-      <h4>Tree:</h4>
-      <div id="tree"></div>
-    </div>
-    <div class="split right">
       <h4>Program:</h4>
       <div id="cont"></div>
       <h4>Output:</h4>
@@ -39,6 +32,13 @@
 	</table>
       </div>
     </div>
+    <div class="split right">
+      <h4>Tree:</h4>
+      <div id="tree"></div>
+    </div>
     <script charset="utf-8" type="text/javascript" src="utils.js"></script>
+    <script charset="utf-8" type="text/javascript" src="viz.js"></script>
+    <script charset="utf-8" type="text/javascript" src="full.js.opaque"></script>
+    <script charset="utf-8" type="text/javascript" src="chart_js.bc.js"></script>
   </body>
 </html>

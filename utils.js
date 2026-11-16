@@ -5,6 +5,20 @@ const output = document.getElementById("output");
 const parsing = document.getElementById("parsing");
 const examples = document.getElementById("examples");
 
+const single = document.getElementById("single");
+const multi = document.getElementById("multi");
+
+function disable_buttons() {
+    single.disabled=true;
+    multi.disabled=true;
+}
+disable_buttons();
+
+function enable_buttons() {
+    single.disabled=false;
+    multi.disabled=false;
+}
+
 async function draw(dot) {
     const viz = new Viz();
     const graph = await viz.renderSVGElement(dot);
